@@ -187,26 +187,32 @@
         android:rowCount="4">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="145dp"
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
+            android:weightSum="1"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp">
+
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_home" />
 
                     <TextView
@@ -214,6 +220,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="houses 1 "
+                        android:layout_weight="1"
                         android:textColor="#000"
                         android:textStyle="bold"
 
@@ -223,6 +230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="House status ..."
+                        android:layout_weight="1"
 
                         />
 
@@ -231,13 +239,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_bx_right_arrow" />
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
                     android:src="@drawable/ic_eclipse_green" />
 
             </LinearLayout>
@@ -246,26 +258,32 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="145dp"
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
+            android:weightSum="1"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp">
+
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_home" />
 
                     <TextView
@@ -273,6 +291,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="houses 2 "
+                        android:layout_weight="1"
                         android:textColor="#000"
                         android:textStyle="bold"
 
@@ -282,6 +301,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="House status ..."
+                        android:layout_weight="1"
 
                         />
 
@@ -290,13 +310,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_bx_right_arrow" />
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
                     android:src="@drawable/ic_eclipse_green" />
 
             </LinearLayout>
@@ -305,26 +329,32 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="145dp"
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
+            android:weightSum="1"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp">
+
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_home" />
 
                     <TextView
@@ -332,6 +362,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="houses 3 "
+                        android:layout_weight="1"
                         android:textColor="#000"
                         android:textStyle="bold"
 
@@ -341,6 +372,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="House status ..."
+                        android:layout_weight="1"
 
                         />
 
@@ -349,41 +381,50 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_bx_right_arrow" />
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
                     android:src="@drawable/ic_eclipse_green" />
 
             </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="145dp"
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
+            android:weightSum="1"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp">
+
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_home" />
 
                     <TextView
@@ -391,6 +432,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="houses 4 "
+                        android:layout_weight="1"
                         android:textColor="#000"
                         android:textStyle="bold"
 
@@ -400,6 +442,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="House status ..."
+                        android:layout_weight="1"
 
                         />
 
@@ -408,13 +451,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_bx_right_arrow" />
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
                     android:src="@drawable/ic_eclipse_green" />
 
             </LinearLayout>
