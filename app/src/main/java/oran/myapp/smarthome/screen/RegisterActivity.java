@@ -1,5 +1,6 @@
 package oran.myapp.smarthome.screen;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     // VIEWS TOOLS
     private LinearLayout sign_in,sign_up ;
     private EditText emailEdit, nameEdit, phoneEdit, passwordEdit;
+    private ProgressDialog progressDialog;
     private MainActivity inst = MainActivity.getInstance();
 
 
@@ -67,6 +69,9 @@ public class RegisterActivity extends AppCompatActivity {
         nameEdit = findViewById(R.id.fullname);
         phoneEdit = findViewById(R.id.phone);
         passwordEdit = findViewById(R.id.password);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading ... ");
+        progressDialog.setCancelable(false);
     }
 
 
@@ -92,11 +97,12 @@ public class RegisterActivity extends AppCompatActivity {
             passwordEdit.setError("Required ! ");
             return;
         }
-
+        progressDialog.show();
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                   if(!task.isSuccessful()){
+                      progressDialog.dismiss();
                       Toast.makeText(RegisterActivity.this,"auth err: "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                       return;
                   }
@@ -107,10 +113,15 @@ public class RegisterActivity extends AppCompatActivity {
                       @Override
                       public void onComplete(@NonNull Task<Void> task) {
                           if(!task.isSuccessful()){
+                              progressDialog.dismiss();
                               Toast.makeText(RegisterActivity.this,"user err: "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                               return;
                           }
+                          progressDialog.dismiss();
                           inst.setUserData(helper);
+                          Intent intent = new Intent(RegisterActivity.this, DashboardActivity.class);
+                          startActivity(intent);
+                          finish();
                           Toast.makeText(RegisterActivity.this,"Register Successfully ! ",Toast.LENGTH_SHORT).show();
                       }
                   });
