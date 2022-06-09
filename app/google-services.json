@@ -8,35 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:53650273259:android:8757428e6a610f39351fae",
-        "android_client_info": {
-          "package_name": "com.harbin.vtcdrivertransport"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "53650273259-hi5hj4hk70vrdepsbac6o1lp5lsf0gbc.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBD_gFqJARbnEdXTFS7Gx4ucCzvQL2TYfk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "53650273259-hi5hj4hk70vrdepsbac6o1lp5lsf0gbc.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:53650273259:android:f9a6e3b3a9ad1d96351fae",
         "android_client_info": {
           "package_name": "oran.myapp.smarthome"

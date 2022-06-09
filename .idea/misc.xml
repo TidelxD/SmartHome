@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/NANO CONSULTING/AndroidStudioProjects/SmartHome/app/src/main/res/drawable/auth_background_corners.xml" value="0.1935" />
+        <entry key="..\:/K-A-G-D/PGM/androidProject/SmartHome/app/src/main/res/drawable/ic_bx_right_arrow.xml" value="0.18" />
+        <entry key="..\:/K-A-G-D/PGM/androidProject/SmartHome/app/src/main/res/drawable/ic_home.xml" value="0.18" />
+        <entry key="..\:/K-A-G-D/PGM/androidProject/SmartHome/app/src/main/res/layout/activity_dashboard.xml" value="0.22" />
+        <entry key="..\:/K-A-G-D/PGM/androidProject/SmartHome/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/NANO CONSULTING/AndroidStudioProjects/SmartHome/app/src/main/res/drawable/authenticaion_gradiant.xml" value="0.203" />
-        <entry key="..\:/Users/NANO CONSULTING/AndroidStudioProjects/SmartHome/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/NANO CONSULTING/AndroidStudioProjects/SmartHome/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/NANO CONSULTING/AndroidStudioProjects/SmartHome/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/NANO CONSULTING/AndroidStudioProjects/SmartHome/app/src/main/res/layout/activity_register.xml" value="0.264" />
       </map>
     </option>
   </component>
