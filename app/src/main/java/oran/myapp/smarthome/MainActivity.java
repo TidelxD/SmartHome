@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import oran.myapp.smarthome.model.User;
+import oran.myapp.smarthome.screen.DashboardActivity;
 import oran.myapp.smarthome.screen.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     userData = snapshot.getValue(User.class);
+                    Toast.makeText(MainActivity.this,"login Successfully ! ",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
 
                 @Override
