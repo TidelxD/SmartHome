@@ -193,6 +193,7 @@
             app:cardCornerRadius="15dp"
             android:weightSum="1"
             android:layout_columnWeight="1"
+            android:id="@+id/home1"
             app:cardElevation="10dp">
 
             <LinearLayout
@@ -263,6 +264,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
             android:weightSum="1"
+            android:id="@+id/home2"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
@@ -334,6 +336,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
             android:weightSum="1"
+            android:id="@+id/home3"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
@@ -404,6 +407,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="15dp"
             android:weightSum="1"
+            android:id="@+id/home4"
             android:layout_columnWeight="1"
             app:cardElevation="10dp">
 
