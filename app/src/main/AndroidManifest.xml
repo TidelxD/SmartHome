@@ -14,16 +14,16 @@
         android:theme="@style/Theme.SmartHome"
         tools:targetApi="31">
         <activity
-            android:name=".RoomsActivity"
+            android:name=".screen.RoomsActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".screen.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".screen.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".screen.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
