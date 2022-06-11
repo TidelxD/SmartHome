@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                 usersRef.child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(!snapshot.exists()) {
+                         if(!snapshot.exists()) {
                             progressDialog.dismiss();
                             Toast.makeText(LoginActivity.this, "user Not Exist", Toast.LENGTH_SHORT).show();
                             return;

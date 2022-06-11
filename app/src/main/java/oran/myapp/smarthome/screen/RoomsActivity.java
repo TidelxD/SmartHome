@@ -1,5 +1,6 @@
 package oran.myapp.smarthome.screen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,6 +20,10 @@ public class RoomsActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_rooms);
         init();
 
+        room1.setOnClickListener(this);
+        room2.setOnClickListener(this);
+        room3.setOnClickListener(this);
+        room4.setOnClickListener(this);
 
     }
 
@@ -33,6 +38,7 @@ public class RoomsActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-
+              Intent intent = new Intent(RoomsActivity.this,RoomDataActivity.class);
+              startActivity(intent);
     }
 }
