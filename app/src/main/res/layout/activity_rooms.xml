@@ -23,10 +23,9 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="245dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="27dp"
             android:layout_marginEnd="20dp"
@@ -36,6 +35,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingBottom="8dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -73,7 +73,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="All Rooms"
+                            android:text="All rooms"
 
                             />
 
@@ -107,7 +107,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rented Rooms"
+                            android:text="Rented rooms"
 
                             />
 
@@ -141,7 +141,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Free Rooms"
+                            android:text="Free rooms"
 
                             />
 
@@ -162,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="64dp"
+                    android:layout_marginTop="24dp"
                     android:text="All lights will switch of automatically as per the timer which is there in the setting."
                     android:textSize="14sp" />
 
