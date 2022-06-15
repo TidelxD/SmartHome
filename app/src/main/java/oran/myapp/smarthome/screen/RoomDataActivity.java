@@ -7,6 +7,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -26,15 +27,17 @@ import oran.myapp.smarthome.R;
 public class RoomDataActivity extends AppCompatActivity {
 
 
-    private CardView LED3card,LED3Button;
+    private CardView LED3card,LED3Button,othersensors;
     private ImageView roomLED3,LED3controller;
     private TextView LED3_status;
 
     // FIREBASE TOOLS
-    FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32cam-110e7-default-rtdb.firebaseio.com/");
-    DatabaseReference dataRef = ROOT.getReference("data");
+    FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
+    DatabaseReference dataRef = ROOT.getReference();
 
     private int LED3_state;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,14 @@ public class RoomDataActivity extends AppCompatActivity {
             }
         });
 
+        othersensors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RoomDataActivity.this,SensorsActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
@@ -70,6 +81,7 @@ public class RoomDataActivity extends AppCompatActivity {
         roomLED3=findViewById(R.id.roomLED3);
         LED3controller=findViewById(R.id.LED3controller);
         LED3_status=findViewById(R.id.LED3_status);
+        othersensors=findViewById(R.id.othersensors);
 
 
     }

@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // DATABASE TOOLS
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance();
+    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
     private DatabaseReference usersRef= ROOT.getReference("users");
 
     // VIEWS TOOLS

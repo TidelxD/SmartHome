@@ -22,7 +22,7 @@ import oran.myapp.smarthome.screen.LoginActivity;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance();
+    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
     private DatabaseReference usersRef= ROOT.getReference("users");
     private static MainActivity inst ;
 

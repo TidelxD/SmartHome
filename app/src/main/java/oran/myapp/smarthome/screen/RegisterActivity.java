@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
       // DATABASE TOOLS
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance();
+    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
     private DatabaseReference usersRef= ROOT.getReference("users");
 
     // VIEWS TOOLS
@@ -61,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
+
 
     private void init (){
         sign_in = findViewById(R.id.sign_in);
@@ -119,7 +120,9 @@ public class RegisterActivity extends AppCompatActivity {
                           }
                           progressDialog.dismiss();
                           inst.setUserData(helper);
+
                           Intent intent = new Intent(RegisterActivity.this, DashboardActivity.class);
+                          intent.putExtra("PhoneNo",helper.getPhone());
                           startActivity(intent);
                           finish();
                           Toast.makeText(RegisterActivity.this,"Register Successfully ! ",Toast.LENGTH_SHORT).show();
@@ -130,4 +133,5 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     }
+
 }
