@@ -78,8 +78,6 @@ public class SensorsActivity extends AppCompatActivity {
                     LED1_status.setTextColor(Color.parseColor("#00e6c3"));
                     LED1controller.setImageDrawable(getDrawable(R.drawable.ic_officier_on));
                     dataRef.child("LED1").setValue(1);
-
-
                 }
 
                 if(LED2_state==0){

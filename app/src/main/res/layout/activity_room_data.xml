@@ -18,12 +18,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/room1"
-        android:layout_marginStart="32dp"
-        android:text="Hitachi V9200" />
+
 
     <TextView
         android:id="@+id/voltnumb"
@@ -43,7 +38,7 @@
         android:layout_below="@id/room1"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="32dp"
-        android:text="Volts" />
+        android:text="lux" />
 
     <ImageView
         android:layout_width="wrap_content"
