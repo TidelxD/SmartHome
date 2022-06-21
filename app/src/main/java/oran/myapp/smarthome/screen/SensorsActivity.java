@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +22,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import oran.myapp.smarthome.R;
+import oran.myapp.smarthome.service.FirebaseService;
+import oran.myapp.smarthome.service.broadcaster;
 
 public class SensorsActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private ImageView roomLED1 , LED1controller,LED2controller,roomLED2;
     private TextView LED1_status,LED2_status;
+    private Switch TravlerMode;
 
     // FIREBASE TOOLS
     FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
@@ -37,15 +43,25 @@ public class SensorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensors);
-
+        startService(new Intent(this, FirebaseService.class));
         LED1_status=findViewById(R.id.LED1_status);
         LED2_status=findViewById(R.id.LED2_status);
+        TravlerMode=findViewById(R.id.TravlerMode);
         roomLED1=findViewById(R.id.roomLED1);
         LED1controller=findViewById(R.id.LED1controller);
         LED2controller=findViewById(R.id.LED2controller);
         roomLED2=findViewById(R.id.roomLED2);
 
         getData();
+
+        TravlerMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
 
     }
 
@@ -96,6 +112,7 @@ public class SensorsActivity extends AppCompatActivity {
                     LED2_status.setTextColor(Color.parseColor("#00e6c3"));
                     LED2controller.setImageDrawable(getDrawable(R.drawable.ic_officier_on));
                     dataRef.child("LED2").setValue(1);
+                    if(TravlerMode.isChecked())
                     mAuth.sendPasswordResetEmail(mAuth.getCurrentUser().getEmail());
 
                 }
@@ -108,5 +125,13 @@ public class SensorsActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    protected void onDestroy() {
+        Intent broadcastIntent = new Intent();
+        broadcastIntent.setAction("restartservice");
+        broadcastIntent.setClass(this, broadcaster.class);
+        this.sendBroadcast(broadcastIntent);
+        super.onDestroy();
     }
 }

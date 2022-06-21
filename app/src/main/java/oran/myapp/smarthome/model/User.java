@@ -3,7 +3,7 @@ package oran.myapp.smarthome.model;
 public class User {
 
 
-    private String uid,full_name,phone,email,password;
+    private String uid,full_name,phone,email,password,fcmToken;
 
     public User() {
     }
@@ -14,6 +14,15 @@ public class User {
         this.phone = phone;
         this.email = email;
         this.password = password;
+    }
+
+
+    public String getFcmToken() {
+        return fcmToken;
+    }
+
+    public void setFcmToken(String fcmToken) {
+        this.fcmToken = fcmToken;
     }
 
     public String getUid() {

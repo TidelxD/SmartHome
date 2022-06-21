@@ -18,6 +18,8 @@ import com.google.firebase.database.ValueEventListener;
 import oran.myapp.smarthome.model.User;
 import oran.myapp.smarthome.screen.DashboardActivity;
 import oran.myapp.smarthome.screen.LoginActivity;
+import oran.myapp.smarthome.service.FirebaseService;
+import oran.myapp.smarthome.service.broadcaster;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        startService(new Intent(this, FirebaseService.class));
 
         if(mAuth.getCurrentUser()!=null){
             usersRef.child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -84,5 +86,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void setUserData(User userData) {
         this.userData = userData;
+    }
+
+    @Override
+    protected void onDestroy() {
+        Intent broadcastIntent = new Intent();
+        broadcastIntent.setAction("restartservice");
+        broadcastIntent.setClass(this, broadcaster.class);
+        this.sendBroadcast(broadcastIntent);
+        super.onDestroy();
     }
 }
