@@ -2,6 +2,7 @@ package oran.myapp.smarthome.screen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -31,10 +32,11 @@ public class SensorsActivity extends AppCompatActivity {
     private ImageView roomLED1 , LED1controller,LED2controller,roomLED2;
     private TextView LED1_status,LED2_status;
     private Switch TravlerMode;
+    private CardView imagesActivity;
 
     // FIREBASE TOOLS
-    FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
-    DatabaseReference dataRef = ROOT.getReference();
+    FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32cam-110e7-default-rtdb.firebaseio.com/");
+    DatabaseReference dataRef = ROOT.getReference("data");
 
     private int LED1_state,LED2_state;
 
@@ -47,6 +49,7 @@ public class SensorsActivity extends AppCompatActivity {
         LED1_status=findViewById(R.id.LED1_status);
         LED2_status=findViewById(R.id.LED2_status);
         TravlerMode=findViewById(R.id.TravlerMode);
+        imagesActivity=findViewById(R.id.imagesActivity);
         roomLED1=findViewById(R.id.roomLED1);
         LED1controller=findViewById(R.id.LED1controller);
         LED2controller=findViewById(R.id.LED2controller);
@@ -54,10 +57,10 @@ public class SensorsActivity extends AppCompatActivity {
 
         getData();
 
-        TravlerMode.setOnClickListener(new View.OnClickListener() {
+        imagesActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                  startActivity(new Intent(SensorsActivity.this,CameraDetection.class));
             }
         });
 

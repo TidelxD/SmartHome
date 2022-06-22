@@ -29,7 +29,7 @@ import oran.myapp.smarthome.service.broadcaster;
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CardView home1,home2,home3,home4;
-    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
+    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32cam-110e7-default-rtdb.firebaseio.com/");
     private DatabaseReference usersRef= ROOT.getReference("users");
 
 

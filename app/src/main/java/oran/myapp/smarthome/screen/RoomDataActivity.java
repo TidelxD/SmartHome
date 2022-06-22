@@ -32,8 +32,8 @@ public class RoomDataActivity extends AppCompatActivity {
     private TextView LED3_status;
 
     // FIREBASE TOOLS
-    FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
-    DatabaseReference dataRef = ROOT.getReference();
+    FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32cam-110e7-default-rtdb.firebaseio.com/");
+    DatabaseReference dataRef = ROOT.getReference("data");
 
     private int LED3_state;
 

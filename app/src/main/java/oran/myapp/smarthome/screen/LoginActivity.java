@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // DATABASE TOOLS
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
+    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32cam-110e7-default-rtdb.firebaseio.com/");
     private DatabaseReference usersRef= ROOT.getReference("users");
 
     // VIEWS TOOLS
@@ -118,6 +119,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         Toast.makeText(LoginActivity.this, "error: "+error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.e("cancel","error: "+error.getMessage());
+                        progressDialog.dismiss();
                     }
                 });
             }

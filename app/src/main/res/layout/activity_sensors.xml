@@ -56,15 +56,48 @@
         android:layout_marginTop="45dp"
         android:src="@drawable/ic_temperature" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imagesActivity"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_above="@+id/TravlerMode"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp">
+
+        <ImageView
+            android:id="@+id/other2sensors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@id/voltnumb"
+            android:src="@drawable/ic_baseline_arrow_forward" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagesActivity"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="captured image" />
 
     <Switch
+        android:id="@+id/TravlerMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
-        android:id="@+id/TravlerMode"
-        android:text="Traveler Mode" />
+        android:text="Traveler Mode"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
 

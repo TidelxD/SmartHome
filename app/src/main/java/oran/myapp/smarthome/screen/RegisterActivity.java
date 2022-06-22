@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
       // DATABASE TOOLS
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32-802ed-default-rtdb.firebaseio.com/");
+    private FirebaseDatabase ROOT = FirebaseDatabase.getInstance("https://esp32cam-110e7-default-rtdb.firebaseio.com/");
     private DatabaseReference usersRef= ROOT.getReference("users");
 
     // VIEWS TOOLS

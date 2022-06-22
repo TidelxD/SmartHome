@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="oran.myapp.smarthome">
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHome"
         tools:targetApi="31">
+        <activity
+            android:name=".screen.CameraDetection"
+            android:exported="false" />
         <activity
             android:name=".screen.SensorsActivity"
             android:exported="false" />
@@ -38,8 +41,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,22 +49,21 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.FirebaseService"
-            android:exported="false"
+        <service
+            android:name=".service.FirebaseService"
             android:enabled="true"
-            >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <receiver android:name=".service.broadcaster"
+        <receiver
+            android:name=".service.broadcaster"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
-
         </receiver>
     </application>
 

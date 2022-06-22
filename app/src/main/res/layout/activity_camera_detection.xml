@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FC"
+    tools:context=".screen.RoomDataActivity">
+
+    <TextView
+        android:id="@+id/room1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="ROOM1"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/voltnumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="232"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/room1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:text="lux" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/voltnumb"
+        android:src="@drawable/ic_volts" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageCaptured"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/room1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_screen"
+        app:riv_corner_radius="15dp" />
+
+
+    <LinearLayout
+        android:id="@+id/controllLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageCaptured"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/LED3card"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="15dp">
+
+            <ImageView
+                android:id="@+id/roomLED3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@id/voltnumb"
+                android:src="@drawable/ic_light_on" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+
+            android:id="@+id/LED3_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Movment Detecred In Side"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/LED3Button"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="15dp">
+
+            <ImageView
+                android:id="@+id/LED3controller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@id/voltnumb"
+                android:src="@drawable/ic_officier_on" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controllLinear"
+        android:maxLines="1"
+        android:text="-------------------------------------------------------------------------------------------------------------------"
+        android:textColor="#80C0FF" />
+
+    <TextView
+        android:id="@+id/outSideText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controllLinear"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:maxLines="1"
+        android:text="Outside Temperature is"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/outSideValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/outSideText"
+        android:layout_marginStart="24dp"
+        android:maxLines="1"
+        android:text="36C°"
+        android:textColor="#000"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>
