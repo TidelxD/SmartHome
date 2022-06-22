@@ -113,8 +113,6 @@ public class FirebaseService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-
-
         startForeground(1001,showNotificationForeGound("Smart Home"
         ,"Detection ..."));
         return super.onStartCommand(intent, flags, startId);
